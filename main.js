@@ -58,7 +58,7 @@ let contatore;
 
 button_1.addEventListener('click', function () {
 
-    let verita = false;
+    
 
     const select_level = document.querySelector('#difficolta')
 
