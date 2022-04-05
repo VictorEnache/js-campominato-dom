@@ -74,20 +74,22 @@ button_1.addEventListener('click', function(){
     
         grid_3.innerHTML = ''
     
-        const lista_celle = document.querySelectorAll('.c_100')        
-
-
-        function prova(parola){
-            console.log(parola)
-        }
-
-
+        const lista_celle = document.querySelectorAll('.c_100');
+        const elenco_bombe = document.querySelectorAll('.bomba') 
+        
     
         for (i = 0; i<100; i++){
             const cella = lista_celle[i]
             let lista_classi = cella.classList;
            if(lista_classi.contains('bomba')){
-                cella.addEventListener('click',prova('test del click'))
+                cella.addEventListener('click',function(){
+                    for (let i = 0; i <16; i++ ){
+                        elenco_bombe[i].classList.add('red')
+                    }
+                    alert(`Hai perso. \nIl tuo punteggio è: ${contatore}`)
+                    
+                })
+                
                 
             }
            else{
@@ -95,6 +97,9 @@ button_1.addEventListener('click', function(){
                cella.classList.add('blue')
                contatore++
                console.log(contatore)
+               if(contatore === 100-16){
+                   alert(`Hai vinto!!! \nIl tuo punteggio è: ${contatore}`)
+               }
                })
 
             }
@@ -115,23 +120,35 @@ button_1.addEventListener('click', function(){
 
         grid_3.innerHTML = ''
 
-        const lista_celle = document.querySelectorAll('.c_81')
-
+        const lista_celle = document.querySelectorAll('.c_81');
+        const elenco_bombe = document.querySelectorAll('.bomba') 
+        
+    
         for (i = 0; i<81; i++){
             const cella = lista_celle[i]
             let lista_classi = cella.classList;
            if(lista_classi.contains('bomba')){
-            cella.addEventListener('click', function(){
-                cella.classList.add('red')
+                cella.addEventListener('click',function(){
+                    for (let i = 0; i <16; i++ ){
+                        elenco_bombe[i].classList.add('red')
+                    }
+                    alert(`Hai perso. \nIl tuo punteggio è: ${contatore}`)
+                    
                 })
-           }
+                
+                
+            }
            else{
                cella.addEventListener('click', function(){
                cella.classList.add('blue')
                contatore++
+               console.log(contatore)
+               if(contatore === 81-16){
+                   alert(`Hai vinto!!! \nIl tuo punteggio è: ${contatore}`)
+               }
                })
 
-           }
+            }
         
         }
     }
@@ -148,23 +165,35 @@ button_1.addEventListener('click', function(){
     
         grid_2.innerHTML = ''
     
-        const lista_celle = document.querySelectorAll('.c_49')
+        const lista_celle = document.querySelectorAll('.c_49');
+        const elenco_bombe = document.querySelectorAll('.bomba') 
+        
     
         for (i = 0; i<49; i++){
             const cella = lista_celle[i]
             let lista_classi = cella.classList;
            if(lista_classi.contains('bomba')){
-            cella.addEventListener('click', function(){
-                cella.classList.add('red')
+                cella.addEventListener('click',function(){
+                    for (let i = 0; i <16; i++ ){
+                        elenco_bombe[i].classList.add('red')
+                    }
+                    alert(`Hai perso. \nIl tuo punteggio è: ${contatore}`)
+                    
                 })
-           }
+                
+                
+            }
            else{
                cella.addEventListener('click', function(){
                cella.classList.add('blue')
                contatore++
+               console.log(contatore)
+               if(contatore === 49-16){
+                   alert(`Hai vinto!!! \nIl tuo punteggio è: ${contatore}`)
+               }
                })
 
-           }
+            }
         
         }
     }
