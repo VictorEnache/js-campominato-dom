@@ -87,7 +87,7 @@ bottone.addEventListener('click', function () {
         }
 
         function casella_giusta() {
-            /* elenco_class_fiore[i].classList.add('blue') */
+          
             this.classList.add('blue')
             ++contatore
             if (contatore === 100 - 16) {
@@ -160,7 +160,7 @@ bottone.addEventListener('click', function () {
         }
 
         function casella_giusta() {
-            /* elenco_class_fiore[i].classList.add('blue') */
+            
             this.classList.add('blue')
             ++contatore
             if (contatore === 81 - 16) {
@@ -233,7 +233,7 @@ bottone.addEventListener('click', function () {
         }
 
         function casella_giusta() {
-            /* elenco_class_fiore[i].classList.add('blue') */
+            
             this.classList.add('blue')
             ++contatore
             if (contatore === 49 - 16) {
