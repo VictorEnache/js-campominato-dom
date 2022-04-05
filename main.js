@@ -1,8 +1,8 @@
 
-    function getRndInteger(min, max) {
-        return Math.floor(Math.random() * (max - min + 1) ) + min;
-      }
-    
+function getRndInteger(min, max) {
+    return Math.floor(Math.random() * (max - min + 1) ) + min;
+    }
+
 
 function griglia ( selettore, tag_cella, classe_cella, numero_celle) {
     const griglia = document.querySelector(selettore); 
@@ -57,6 +57,8 @@ const grid_3 = document.querySelector('.grid_3');
 let contatore;
 
 button_1.addEventListener('click', function(){
+
+    let verita = false;
     
     const select_level = document.querySelector('#difficolta')
     
@@ -72,16 +74,22 @@ button_1.addEventListener('click', function(){
     
         grid_3.innerHTML = ''
     
-        const lista_celle = document.querySelectorAll('.c_100')
+        const lista_celle = document.querySelectorAll('.c_100')        
+
+
+        function prova(parola){
+            console.log(parola)
+        }
+
+
     
         for (i = 0; i<100; i++){
             const cella = lista_celle[i]
             let lista_classi = cella.classList;
            if(lista_classi.contains('bomba')){
-            cella.addEventListener('click', function(){
-                cella.classList.add('red')
-                })
-           }
+                cella.addEventListener('click',prova('test del click'))
+                
+            }
            else{
                cella.addEventListener('click', function(){
                cella.classList.add('blue')
@@ -89,9 +97,11 @@ button_1.addEventListener('click', function(){
                console.log(contatore)
                })
 
-           }
+            }
         
         }
+        
+
     }
 
     else if (select_level.value === 'livello_2'){
