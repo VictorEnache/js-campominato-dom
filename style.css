@@ -1,0 +1,49 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.grid_1,
+.grid_2,
+.grid_3{
+    display: flex;
+    flex-wrap: wrap;
+    width:1000px;
+    margin: auto;
+}
+
+.c_100{
+    width: calc(100% / 10);
+    aspect-ratio: 1/1;
+    border: 1px solid black;
+}
+
+.c_81{
+    width: calc(100% / 9);
+    aspect-ratio: 1/1;
+    border: 1px solid black;
+}
+
+.c_49{
+    width: calc(100% / 7);
+    aspect-ratio: 1/1;
+    border: 1px solid black;
+}
+
+.c_100,
+.c_81,
+.c_49{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.blue{
+    background-color: blue;
+}
+
+.red{
+    background-color: red;
+}
