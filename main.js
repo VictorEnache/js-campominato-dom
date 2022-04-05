@@ -54,6 +54,7 @@ const grid_1 = document.querySelector('.grid_1');
 const grid_2 = document.querySelector('.grid_2');
 const grid_3 = document.querySelector('.grid_3');
 
+let contatore;
 
 button_1.addEventListener('click', function(){
     
@@ -62,6 +63,8 @@ button_1.addEventListener('click', function(){
 
     if (select_level.value === 'livello_1'){
         grid_1.innerHTML= ''
+
+        contatore = 0;
 
         griglia ( '.container .grid_1', 'div', 'c_100', 100)
     
@@ -82,6 +85,8 @@ button_1.addEventListener('click', function(){
            else{
                cella.addEventListener('click', function(){
                cella.classList.add('blue')
+               contatore++
+               console.log(contatore)
                })
 
            }
@@ -91,6 +96,8 @@ button_1.addEventListener('click', function(){
 
     else if (select_level.value === 'livello_2'){
         grid_2.innerHTML= ''
+
+        contatore = 0;
 
         griglia ( '.container .grid_2', 'div', 'c_81', 81)
 
@@ -111,6 +118,7 @@ button_1.addEventListener('click', function(){
            else{
                cella.addEventListener('click', function(){
                cella.classList.add('blue')
+               contatore++
                })
 
            }
@@ -121,6 +129,8 @@ button_1.addEventListener('click', function(){
     else if (select_level.value === 'livello_3'){
 
         grid_3.innerHTML= ''
+
+        contatore = 0;
 
         griglia ( '.container .grid_3', 'div', 'c_49', 49)
 
@@ -141,6 +151,7 @@ button_1.addEventListener('click', function(){
            else{
                cella.addEventListener('click', function(){
                cella.classList.add('blue')
+               contatore++
                })
 
            }
