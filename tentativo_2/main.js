@@ -21,16 +21,21 @@ bottone.addEventListener('click', function () {
 
     const numeri_bomba = []
 
-    while (numeri_bomba.length < 16) {
-        const bomba = getRndInteger(1, 100)
-        if (!numeri_bomba.includes(bomba)) {
-            numeri_bomba.push(bomba)
-        }
-    }
+
 
     const livello = document.getElementById('livello')
 
+
+
     if (livello.value === 'livello_1') {
+
+        while (numeri_bomba.length < 16) {
+            const bomba = getRndInteger(1, 100)
+            if (!numeri_bomba.includes(bomba)) {
+                numeri_bomba.push(bomba)
+            }
+        }
+
         grid_container_1.innerHTML = ''
         grid_container_2.innerHTML = ''
         grid_container_3.innerHTML = ''
@@ -103,6 +108,14 @@ bottone.addEventListener('click', function () {
         }
     }
     else if (livello.value === 'livello_2') {
+
+        while (numeri_bomba.length < 16) {
+            const bomba = getRndInteger(1, 81)
+            if (!numeri_bomba.includes(bomba)) {
+                numeri_bomba.push(bomba)
+            }
+        }
+
         grid_container_1.innerHTML = ''
         grid_container_2.innerHTML = ''
         grid_container_3.innerHTML = ''
@@ -176,6 +189,14 @@ bottone.addEventListener('click', function () {
         }
     }
     else if (livello.value === 'livello_3') {
+
+        while (numeri_bomba.length < 16) {
+            const bomba = getRndInteger(1, 49)
+            if (!numeri_bomba.includes(bomba)) {
+                numeri_bomba.push(bomba)
+            }
+        }
+
         grid_container_1.innerHTML = ''
         grid_container_2.innerHTML = ''
         grid_container_3.innerHTML = ''
